@@ -18,7 +18,7 @@ describe('SOLD.com Test Project: task management', () => {
     }
   });
 
-  //test1
+  //test-1
   it('Items marked as complete, all items have "completed" class', () => {
     cy.get('.toggle')
       .check()
@@ -27,7 +27,7 @@ describe('SOLD.com Test Project: task management', () => {
       .should('have.class', 'completed')
   });
 
-  //test2
+  //test-2
   it('After items marked as complete, toggle completed flag and assert "completed" class is removed', () => {
     cy.get('.toggle')
       .check()
@@ -42,13 +42,13 @@ describe('SOLD.com Test Project: task management', () => {
       .should('not.have.class', 'completed')
   });
 
-  //test3
+  //test-3
   it('Assert the ".todo-count" has text "2 items left"', () => {
     cy.get('.todo-count')
       .should('include.text', '2 items left')
   });
 
-  //test4
+  //test-4
   it('Mark one items completed, assert "Clear Completed" is available', () => {
     cy.get('.toggle')
       .check()
@@ -61,7 +61,7 @@ describe('SOLD.com Test Project: task management', () => {
       .should('exist')
   });
 
-  //test5
+  //test-5
   it('Mark one item completed, click Clear Completed button, assert that marked item no longer exists', () => {
     cy.get('.toggle')
       .check()
@@ -77,7 +77,7 @@ describe('SOLD.com Test Project: task management', () => {
       .should('not.contain', 'test2')
   });
 
-  //test6
+  //test-6
   it('Hide other controls when editing', () => {
     const hidden = [
       {control: '.toggle'},
@@ -98,7 +98,7 @@ describe('SOLD.com Test Project: task management', () => {
       })
   });
 
-  //test7
+  //test-7
   it('Should highlight the currently applied filter', () => {
         const filters = [
           {link: 'Active'},
